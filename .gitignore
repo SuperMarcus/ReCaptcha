@@ -30,6 +30,7 @@ vendor
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
+.build
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion
 

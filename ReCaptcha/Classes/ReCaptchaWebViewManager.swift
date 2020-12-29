@@ -8,7 +8,7 @@
 
 import Foundation
 import WebKit
-
+import UIKit
 
 /** Handles comunications with the webview containing the ReCaptcha challenge.
  */
@@ -29,11 +29,7 @@ internal class ReCaptchaWebViewManager {
     var forceVisibleChallenge = false {
         didSet {
             // Also works on iOS < 9
-            webView.performSelector(
-                onMainThread: "_setCustomUserAgent:",
-                with: forceVisibleChallenge ? Constants.BotUserAgent : nil,
-                waitUntilDone: true
-            )
+            webView.customUserAgent = forceVisibleChallenge ? Constants.BotUserAgent : nil
         }
     }
 
