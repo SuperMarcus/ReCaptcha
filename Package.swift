@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 
 import PackageDescription
 
@@ -19,6 +19,9 @@ let package = Package(
             path: "ReCaptcha",
             exclude: [
                 "Classes/Rx/"
+            ],
+            resources: [
+                .process("Assets/recaptcha.html")
             ]
         )
     ]
